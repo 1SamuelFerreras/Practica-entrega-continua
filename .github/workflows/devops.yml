@@ -1,0 +1,9 @@
+name: CI-Build-Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image test
+        run: docker build . -t test-app
